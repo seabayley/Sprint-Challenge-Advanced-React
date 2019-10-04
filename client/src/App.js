@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { PlayerList } from './components/PlayerList'
+import { DataChart } from './components/DataChart'
 import axios from 'axios'
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
     return !this.state.playerData ? <p>Loading...</p> :
       (
         <div>
+          <DataChart props={this.state.playerData} />
           <PlayerList playerData={this.state.playerData} />
         </div>
       )

@@ -8,9 +8,9 @@ export const PlayerCard = (props) => {
     const searches = props.player.searches
 
     return (
-        <div>
-            <p onClick={toggle}>{props.player.name}</p>
-            {open ? (<p>{name} is from {country}. She has been searched for {searches} time{searches > 1 ? 's.' : '.'}</p>) : <p />}
+        <div className='player_card'>
+            <p className='name' onClick={toggle}>{props.player.name}</p>
+            {open ? (<p className='details'>{name} is from {country}. She has been searched for {searches} time{searches > 1 ? 's.' : '.'}</p>) : <p />}
         </div>
     )
 }
