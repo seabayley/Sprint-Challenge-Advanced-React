@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import './App.css'
+import { PlayerList } from './components/PlayerList'
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +31,7 @@ class App extends React.Component {
     return !this.state.playerData ? <p>Loading...</p> :
       (
         <div>
-
+          <PlayerList playerData={this.state.playerData} />
         </div>
       )
   }
