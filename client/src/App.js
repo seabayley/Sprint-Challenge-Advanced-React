@@ -1,7 +1,7 @@
 import React from 'react'
-import axios from 'axios'
 import './App.css'
 import { PlayerList } from './components/PlayerList'
+import axios from 'axios'
 
 class App extends React.Component {
   constructor() {
@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       apiUrl: 'http://localhost:5000/api/players',
       playerData: null,
+      loading: true,
     }
   }
 
@@ -26,6 +27,7 @@ class App extends React.Component {
         console.log(err)
       })
   }
+
 
   render() {
     return !this.state.playerData ? <p>Loading...</p> :
